@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Healthy Youth Network · Waterdown</title>
+<meta content="Youth-led nonprofit in Waterdown, Ontario helping young people find their path and build allyship for systemic change." name="description"/>
+<meta content="Healthy Youth Network · Find Your Path. Build Allyship." property="og:title"/>
+<meta content="Youth-led nonprofit in Waterdown, Ontario helping young people refine skills, passions, and interests to create a future based on their priorities." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Healthy Youth Network · Find Your Path. Build Allyship." name="twitter:title"/>
+<meta content="Youth-led nonprofit in Waterdown, Ontario helping young people find their path and build allyship for systemic change." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #2E5A4B;
+      --secondary: #8B9A6E;
+      --accent: #D4A373;
+      --text: #1C2E21;
+      --background: #F4F1EA;
+      --muted: #E8E3D6;
+      --white: #fcfaf5;
+      --shadow: 0 8px 20px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.03);
+      --radius: 20px;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Lato', system-ui, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--accent); }
+
+    
+    .site-id-bar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-bottom: 1px solid var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-heading);
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+      color: var(--primary);
+    }
+    .site-id-bar span { opacity: 0.8; font-size: 0.85rem; font-family: var(--font-body); color: var(--text); }
+    @media (max-width: 480px) {
+      .site-id-bar { padding: 0.5rem 1rem; font-size: 0.95rem; flex-wrap: wrap; gap: 0.25rem; }
+    }
+
+    
+    .proof-strip {
+      background: var(--muted);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+    .proof-strip span { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .proof-strip .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--secondary); margin-right: 0.3rem; }
+
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    @media (max-width: 600px) { .container { padding: 0 1rem; } }
+
+    
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .hero-inner {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .hero-left {
+      flex: 1 1 50%;
+      padding: 3rem 2rem 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--white);
+      position: relative;
+      z-index: 2;
+    }
+    .hero-left h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--primary);
+      max-width: 10ch;
+    }
+    .hero-left .sub {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      margin: 1.2rem 0 2rem;
+      color: var(--text);
+      max-width: 38ch;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      letter-spacing: 0.01em;
+    }
+    .btn:hover { background: #1f4034; color: var(--white); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+    }
+    .btn-outline:hover { background: var(--primary); color: var(--white); }
+    .hero-right {
+      flex: 1 1 50%;
+      background: var(--muted);
+      position: relative;
+      overflow: hidden;
+      min-height: 40vh;
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+    @media (max-width: 720px) {
+      .hero-inner { flex-direction: column; }
+      .hero-left { padding: 2rem 1rem 1.5rem; }
+      .hero-right { clip-path: none; min-height: 40vh; width: 100%; }
+    }
+
+    
+    section { padding: 4rem 0; }
+    @media (max-width: 600px) { section { padding: 2.5rem 0; } }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .section-sub { font-size: 1rem; color: var(--text); max-width: 60ch; margin-bottom: 2rem; font-weight: 300; }
+
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .about-text p { font-size: 1.05rem; line-height: 1.6; }
+    .about-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .about-image img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+      border: 6px solid var(--white);
+    }
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .about-image img { width: 240px; height: 240px; }
+    }
+
+    
+    .programs-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .program-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.8rem 2rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      border-left: 6px solid var(--secondary);
+      transition: transform 0.15s;
+    }
+    .program-card:nth-child(even) { border-left-color: var(--accent); margin-left: 2rem; }
+    .program-card:nth-child(odd) { margin-right: 2rem; }
+    .program-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 48px;
+      text-align: center;
+    }
+    .program-card h3 { font-family: var(--font-heading); font-size: 1.3rem; color: var(--primary); margin-bottom: 0.3rem; }
+    .program-card p { font-size: 0.95rem; color: #2f3e33; }
+    @media (max-width: 600px) {
+      .program-card { flex-direction: column; gap: 0.75rem; padding: 1.2rem; }
+      .program-card:nth-child(even) { margin-left: 0; }
+      .program-card:nth-child(odd) { margin-right: 0; }
+    }
+
+    
+    .ally-banner {
+      background: var(--accent);
+      padding: 2.5rem 2rem;
+      border-radius: 30px;
+      margin: 2rem 0 0;
+      color: var(--white);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .ally-banner h2 { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 600; }
+    .ally-banner p { max-width: 40ch; font-weight: 300; font-size: 1rem; }
+    .ally-banner .compass { font-size: 2.8rem; opacity: 0.7; }
+
+    
+    .timeline { display: flex; flex-direction: column; gap: 2rem; }
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .timeline-icon {
+      background: var(--primary);
+      color: var(--white);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+    .timeline-text h4 { font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary); }
+    .timeline-text p { font-size: 0.95rem; color: #2f3e33; max-width: 50ch; }
+
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+    .gallery-grid img:hover { transform: scale(1.01); }
+    .gallery-grid .tall { grid-row: span 2; height: 100%; min-height: 460px; }
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid .tall { grid-row: span 1; min-height: 220px; }
+    }
+
+    
+    .cta-section {
+      position: relative;
+      background: var(--muted);
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .cta-section .bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .cta-content {
+      position: relative;
+      background: rgba(244, 241, 234, 0.8);
+      backdrop-filter: blur(2px);
+      padding: 2rem 2.5rem;
+      border-radius: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .cta-content h2 { font-family: var(--font-heading); font-size: 2rem; color: var(--primary); }
+    .cta-content p { margin: 1rem 0 1.5rem; }
+
+    
+    .contact-details {
+      background: var(--white);
+      border-radius: 30px;
+      padding: 2rem 2.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .contact-details div { flex: 1 1 180px; }
+    .contact-details h4 { font-family: var(--font-heading); color: var(--primary); margin-bottom: 0.5rem; }
+    .contact-details a { display: block; }
+    .contact-details .address { font-style: normal; line-height: 1.6; }
+
+    
+    .next-steps {
+      background: var(--muted);
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      margin-top: 2rem;
+    }
+    .next-steps h3 { font-family: var(--font-heading); color: var(--primary); margin-bottom: 0.75rem; }
+    .next-steps ol { padding-left: 1.5rem; }
+    .next-steps li { margin-bottom: 0.5rem; }
+
+    
+    .site-footer {
+      padding: 1.5rem 0 2rem;
+      font-size: 0.8rem;
+      color: #4a5a4a;
+      border-top: 1px solid var(--muted);
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .site-footer a { color: var(--primary); }
+
+    
+    .text-center { text-align: center; }
+    .mt-2 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .gap-1 { gap: 1rem; }
+    .flex-wrap { display: flex; flex-wrap: wrap; align-items: center; }
+  </style>
+</head>
+<body>
+<header class="site-id-bar">
+<span>Healthy Youth Network</span>
+<span>Waterdown, ON</span>
+</header>
+<div class="proof-strip">
+<span><span class="dot"></span> Waterdown, Ontario</span>
+<span><span class="dot"></span> Youth-led nonprofit</span>
+<span><span class="dot"></span> <a href="https://healthyouthnetwork.ca" rel="noopener" target="_blank">healthyouthnetwork.ca</a></span>
+</div>
+<section class="hero" id="summary">
+<div class="hero-inner">
+<div class="hero-left">
+<h1>Find Your Path. Build Allyship.</h1>
+<p class="sub">A youth-led nonprofit in Waterdown helping young people refine their skills, passions, and interests to create a future based on their priorities and goals.</p>
+<div class="hero-actions">
+<a class="btn" href="#summary">Read the summary</a>
+<a class="btn btn-outline" href="https://healthyouthnetwork.ca" rel="noopener" target="_blank">Check source record</a>
+</div>
+</div>
+<div class="hero-right">
+<img alt="young person standing at a forest path fork looking forward" height="800" loading="eager" src="https://images.pexels.com/photos/8523173/pexels-photo-8523173.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</div>
+</section>
+<div class="container">
+<section>
+<div class="about-grid">
+<div class="about-text">
+<h2 class="section-title">Our path</h2>
+<p>Healthy Youth Network is a nonprofit based in Waterdown, Ontario, dedicated to helping young people discover their path. Through our What's Your Path program, we guide youth in refining their skills, passions, and interests to build a future aligned with their priorities and goals. Our youth-led Ally Program creates systemic change aimed at reducing gender-based violence. We believe in the power of community and the potential of every young person.</p>
+</div>
+<div class="about-image">
+<img alt="group of diverse teenagers sitting in a circle outdoors talking" height="800" loading="lazy" src="https://images.pexels.com/photos/8457969/pexels-photo-8457969.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</div>
+</section>
+<section>
+<h2 class="section-title">Program snapshot</h2>
+<div class="programs-grid">
+<div class="program-card">
+<div class="program-icon">🌱</div>
+<div>
+<h3>What's Your Path Program</h3>
+<p>Helps young people refine their skills, passions, and interests to develop a personalized path for the future.</p>
+</div>
+</div>
+<div class="program-card">
+<div class="program-icon">🤝</div>
+<div>
+<h3>Ally Program</h3>
+<p>A youth-led initiative aimed at reducing gender-based violence through systemic change and peer support.</p>
+</div>
+</div>
+<div class="program-card">
+<div class="program-icon">🙋</div>
+<div>
+<h3>Volunteer Opportunities</h3>
+<p>Join our community of youth and adults to support programs and events that empower young people.</p>
+</div>
+</div>
+</div>
+<div class="ally-banner">
+<div>
+<h2>Ally Program</h2>
+<p>Youth-led systemic change to reduce gender-based violence. Rooted in Waterdown.</p>
+</div>
+<div class="compass">🧭</div>
+</div>
+</section>
+<section>
+<h2 class="section-title">Why this matters</h2>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-icon">🌿</div>
+<div class="timeline-text">
+<h4>Youth-led approach</h4>
+<p>Programs are designed and guided by young people, ensuring relevance and genuine empowerment.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-icon">⚖️</div>
+<div class="timeline-text">
+<h4>Systemic change focus</h4>
+<p>We address root causes of gender-based violence, not just symptoms.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-icon">🏡</div>
+<div class="timeline-text">
+<h4>Community-rooted</h4>
+<p>Based in Waterdown, with a network of local support and partnerships.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="section-title">Community in action</h2>
+<div class="gallery-grid">
+<img alt="volunteers planting trees in a community garden" class="tall" height="800" loading="lazy" src="https://images.pexels.com/photos/26614518/pexels-photo-26614518.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="teenagers painting a mural on a brick wall" height="800" loading="lazy" src="https://images.pexels.com/photos/7149330/pexels-photo-7149330.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="youth group hiking on a trail in autumn" height="800" loading="lazy" src="https://images.pexels.com/photos/16737623/pexels-photo-16737623.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="students working on a laptop in a bright room" height="800" loading="lazy" src="https://images.pexels.com/photos/9159076/pexels-photo-9159076.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</section>
+<section class="cta-section">
+<img alt="Organization photo" aria-hidden="true" class="bg-img" height="800" loading="lazy" src="https://images.pexels.com/photos/5905526/pexels-photo-5905526.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<div class="cta-content">
+<h2>Every path starts with a step</h2>
+<p>Read the summary above or check the source record for more about our work in Waterdown.</p>
+<div class="flex-wrap" style="justify-content:center; gap:1rem;">
+<a class="btn" href="#summary">Read the summary</a>
+<a class="btn btn-outline" href="https://healthyouthnetwork.ca" rel="noopener" style="border-color:var(--primary); color:var(--primary);" target="_blank">Check source record</a>
+</div>
+</div>
+</section>
+<section>
+<div class="next-steps">
+<h3>What happens next?</h3>
+<ol>
+<li>Use the contact details below to reach out — tell us which program or donation interest you have.</li>
+<li>We’ll listen to your questions about volunteering, donating, or joining a program.</li>
+<li>Together we confirm the best next step: a call, an info sheet, or a meeting.</li>
+</ol>
+</div>
+</section>
+<section>
+<h2 class="section-title">Contact &amp; location</h2>
+<div class="contact-details">
+<div>
+<h4>Call</h4>
+<a href="tel:+12893398455">(289) 339-8455</a>
+</div>
+<div>
+<h4>Email</h4>
+<a href="mailto:info@healthyouthnetwork.ca">info@healthyouthnetwork.ca</a>
+</div>
+<div>
+<h4>Address</h4>
+<address class="address">244 Dundas St E<br/>Waterdown, ON</address>
+</div>
+</div>
+</section>
+<section id="contact"><form action="mailto:info@healthyouthnetwork.ca" enctype="text/plain" method="post"><textarea name="Message" placeholder="Message" rows="4"></textarea><button type="submit">Send email</button></form></section><footer class="site-footer">
+<span>© <span id="year"></span> Healthy Youth Network</span>
+<span>Photos: <a href="https://www.pexels.com/photo/girl-wearing-a-blue-dress-standing-on-the-pathway-8523173/" rel="noopener" target="_blank">Dmitriy Tarasenko</a>, <a href="https://www.pexels.com/photo/children-studying-on-the-playground-8457969/" rel="noopener" target="_blank">Norma Mortenson</a>, <a href="https://www.pexels.com/photo/asian-teen-writing-structure-of-primitive-organism-on-whiteboard-5905526/" rel="noopener" target="_blank">Katerina Holmes</a>, <a href="https://www.pexels.com/photo/schoolchildren-playing-and-exercising-during-an-outdoor-physical-education-class-25748905/" rel="noopener" target="_blank">Aleksandar Andreev</a>, <a href="https://www.pexels.com/photo/person-writing-on-book-page-346807/" rel="noopener" target="_blank">Porapak Apichodilok</a>, <a href="https://www.pexels.com/photo/students-in-the-school-hallway-8419167/" rel="noopener" target="_blank">RDNE Stock project</a>, <a href="https://www.pexels.com/photo/people-planting-flowers-in-a-park-26614518/" rel="noopener" target="_blank">Berna</a>, <a href="https://www.pexels.com/photo/men-painting-wall-7149330/" rel="noopener" target="_blank">cottonbro studio</a>, <a href="https://www.pexels.com/photo/a-group-of-people-hiking-in-hills-in-autumn-16737623/" rel="noopener" target="_blank">Luka Peric</a>, <a href="https://www.pexels.com/photo/a-pair-of-students-looking-at-a-man-i-front-using-a-laptop-9159076/" rel="noopener" target="_blank">Mikhail Nilov</a> · Pexels</span>
+</footer>
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
